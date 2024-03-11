@@ -108,10 +108,15 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste without affecting text in the current register' })
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste and delete into black hole register' })
+vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank into plus register' })
+vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank until end of line into plus register' })
+vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete into black hole register' })
 
 -- Q does unspeakable things
 vim.keymap.set('n', 'Q', '<nop>')
+
+vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[R]ename [W]ord' })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -440,7 +445,7 @@ require('lazy').setup({
 
                     -- Rename the variable under your cursor
                     --  Most Language Servers support renaming across files, etc.
-                    map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
+                    map('<leader>rv', vim.lsp.buf.rename, '[R]ename [V]ariable')
 
                     -- Execute a code action, usually your cursor needs to be on top of an error
                     -- or a suggestion from your LSP for this to activate.
