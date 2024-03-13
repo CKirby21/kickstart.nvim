@@ -122,6 +122,7 @@ vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]], { desc = 'Delete into black h
 vim.keymap.set('n', 'Q', '<nop>')
 
 vim.keymap.set('n', '<leader>rw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = '[R]ename [W]ord' })
+vim.keymap.set('n', '<leader>x', '<cmd>!chmod +x %<CR>', { desc = 'Set E[x]ecute Permissions', silent = true })
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
