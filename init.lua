@@ -207,6 +207,14 @@ require('lazy').setup({
     -- "gc" to comment visual regions/lines
     { 'numToStr/Comment.nvim', opts = {} },
 
+    {
+      'mbbill/undotree',
+      opts = {},
+      config = function()
+            vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = '[U]ndo Tree' })
+      end,
+    },
+
     -- Here is a more advanced example where we pass configuration
     -- options to `gitsigns.nvim`. This is equivalent to the following lua:
     --    require('gitsigns').setup({ ... })
