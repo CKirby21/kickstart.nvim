@@ -47,6 +47,9 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
+-- Turn off long line wrapping
+vim.opt.wrap = false
+
 -- Make line numbers default
 vim.opt.number = true
 
