@@ -218,6 +218,13 @@ require('lazy').setup({
       end,
     },
 
+    {
+      'tpope/vim-fugitive',
+      opts = {},
+      config = function()
+      end,
+    },
+
     -- Here is a more advanced example where we pass configuration
     -- options to `gitsigns.nvim`. This is equivalent to the following lua:
     --    require('gitsigns').setup({ ... })
