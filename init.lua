@@ -222,6 +222,7 @@ require('lazy').setup({
       'tpope/vim-fugitive',
       opts = {},
       config = function()
+            vim.keymap.set('n', '<leader>gs', vim.cmd.Git, { desc = '[G]it Status' })
       end,
     },
 
