@@ -536,6 +536,7 @@ require('lazy').setup({
                 pyright = {},
                 rust_analyzer = {},
                 bashls = {},
+                jdtls = {},
                 -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
                 --
                 -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -784,7 +785,7 @@ require('lazy').setup({
 
             ---@diagnostic disable-next-line: missing-fields
             require('nvim-treesitter.configs').setup {
-                ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'rust', 'cpp', 'python' },
+                ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'rust', 'cpp', 'python', 'java' },
                 -- Autoinstall languages that are not installed
                 auto_install = true,
                 highlight = { enable = true },
