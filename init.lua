@@ -115,7 +115,7 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
-vim.keymap.set('x', '<leader>p', [["_dp]], { desc = 'Paste and delete into black hole register' })
+vim.keymap.set('x', '<leader>p', [["_dP]], { desc = 'Paste and delete into black hole register' })
 vim.keymap.set('n', 'x', [["_x]], { desc = 'X key deletes into black hole register' })
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]], { desc = 'Yank into plus register' })
 vim.keymap.set('n', '<leader>Y', [["+Y]], { desc = 'Yank until end of line into plus register' })
